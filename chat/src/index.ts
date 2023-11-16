@@ -8,7 +8,7 @@ dotenv.config();
 
 // initialize server with port and originURL
 const port = 1337
-const originUrl = process.env.DEBUG ? ['http://localhost:5173','http://localhost:8080'] : ['https://www.sppeek.online', 'https://sppeek.online'];
+const originUrl = process.env.DEBUG ? ['http://localhost:5173', 'http://localhost:8080'] : ['https://www.sppeek.online', 'https://sppeek.online'];
 const httpServer = createServer()
 const io = new Server(httpServer, {
     connectionStateRecovery: {
@@ -87,7 +87,7 @@ io.on('connection', (socket) => {
         });
     } catch (e) {
         console.log(e)
-        socket.emit('connection_error', () => {})
+        socket.emit('connection_error', () => { })
     }
 })
 

@@ -16,4 +16,4 @@ RUN npm run copy
 
 RUN curl https://truststore.pki.rds.amazonaws.com/eu-central-1/eu-central-1-bundle.pem > ./dist/rds-ca-2019-eu-central-1.pem
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]

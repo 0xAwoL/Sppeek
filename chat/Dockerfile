@@ -20,4 +20,4 @@ EXPOSE 1337
 RUN npm run build
 
 # Command to start your production application
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]

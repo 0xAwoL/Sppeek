@@ -26,7 +26,7 @@
   3. ./buildDockerImages.sh // make sure to change .env file in every service folder!
   4. docker-compose up -d
   ```
-  Nagivate to localhost:8080
+  Navigate to localhost:8080
   
   Enjoy!
 

@@ -1,8 +1,10 @@
-<img src="https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/d3b52217-2678-4b5a-b405-13df57340be9" width="500" height="300" padding="0"/>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/d3b52217-2678-4b5a-b405-13df57340be9">
-  <source media="(prefers-color-scheme: light)" srcset="hhttps://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/36662d0c-f47c-4bc5-a828-98124b2c60e0" width="500" height="300" padding="0">
-</picture>
+<p align="left">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/d3b52217-2678-4b5a-b405-13df57340be9" width=500 height=300 >
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/36662d0c-f47c-4bc5-a828-98124b2c60e0" width=500 height=300 >
+      <img alt="Shows a black logo in light color mode and a white one in dark color mode.">
+    </picture>
+</p>
 
 **Welcome to my real-time web chat application. Offers a straightforward chat experience within a single room. User authentication is included for a secure and interactive chat environment and introduces essential features such as email verification and password management.**
 

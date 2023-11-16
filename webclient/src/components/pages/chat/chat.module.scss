@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+@import "animate.css";
+
+$text: #020203;
+$background: #fcfcfd;
+$primary: #bbbdd3;
+$secondary: #d7d8e5;
+$accent: #346565;
+$bodybackground: #D8D8D8;
+
+$grey: #eff0f3;
+$maincolor: #3B42F0;
+$green: #2a9d8f;
+$darkgreen: #39768e;
+$orange: #e76f51;
+$yellow: #e9c46a;
+$brightorange: #f4a261;
+
+html {
+    cursor: pointer;
+    font-family: "Azeret Mono";
+}
+
+::selection {
+    color: rgb(150, 17, 52);
+}
+
+body {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    background-color: $bodybackground;
+}
+
+.chatPage {
+    font-family: 'Azeret Mono';
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 600px;
+}
+
+.mainPage {
+    height: 75%;
+    height: 75vh;
+    width: 75%;
+    display: flex;
+    // margin: 1rem;
+    min-height: 400px;
+}
+
+.leftParent {
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    width: 75%;
+    border-radius: 1rem 0rem 0rem 1rem;
+    background-color: $background;
+    margin: 0;
+    padding: 0;
+}
+
+.chatLog::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.chatLog::-webkit-scrollbar {
+    width: 7px;
+    background-color: #F5F5F5;
+}
+
+.chatLog::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #cccccc;
+}
+
+.chatLog {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    // scrollbar 
+    scroll-snap-type: mandatory;
+    scrollbar-width: none;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-margin-bottom: 0;
+    scroll-margin: 0;
+    padding: 0;
+    margin: 0;
+
+}
+
+// foreign message 
+.message {
+    display: flex;
+    margin: 1rem;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    animation: fadeInRight ease 1s;
+
+
+    &.leftSide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        &.timestamp {
+            font-size: 8px;
+        }
+    }
+
+    .rightSide {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        flex-wrap: wrap;
+
+
+        .messageText {
+            white-space: normal;
+            word-break: break-word; 
+            padding: 1rem;
+            background-color: $darkgreen;
+            border-radius: 10px;
+            font-size: 10px;
+            color: white;
+            text-align: left;
+
+        }
+
+        &.username {
+            align-self: flex-end;
+            font-size: 10px;
+
+        }
+    }
+}
+
+// our message
+.myMessage {
+    justify-content: flex-start;
+    display: flex;
+    margin: 1rem;
+    font-size: 12px;
+    gap: 0.5rem;
+    animation: fadeInLeft ease 1s;
+
+
+    .leftSide {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .messageText {
+            white-space: normal;
+            word-break: break-word; 
+            padding: 1rem;
+            background-color: $green;
+            color: white;
+            border-radius: 10px;
+            font-size: 10px;
+            text-align: left;
+            max-width: 100%;
+        }
+
+        &.username {
+            align-self: flex-start;
+            font-size: 10px;
+        }
+    }
+
+    .rightSide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        &.timestamp {
+            font-size: 8px;
+        }
+    }
+}
+
+
+.inputBar {
+    border-bottom-left-radius: 1rem;
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+}
+
+.submitInput {
+    margin-left: -10000px;
+}
+
+.chatForm {
+    display: flex;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    width: 95%;
+    justify-content: center;
+}
+
+.messageInput {
+    caret-color: transparent;
+    width: 90%;
+    border: none;
+    background-color: $grey;
+    color: black;
+    border-bottom: 2px solid #D8D8D8;
+    line-clamp: none;
+    transition:
+        width 0.75s;
+    font-family: "Azeret Mono";
+}
+
+.messageInput:focus {
+    outline: none;
+    border-bottom: 2px solid #D8D8D8;
+    width: 100%;
+}
+
+.messageInput:hover {
+    border-bottom: 2px solid #D8D8D8;
+    width: 100%;
+}
+
+.rightParent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+    background-color: $grey;
+    border-radius: 0rem 1rem 1em 0rem;
+    min-width: 150px;
+}
+
+.usersHeader {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-self: center;
+    background-color: $background;
+    border-radius: 0.5rem;
+    width: 80%;
+    text-align: center;
+    padding: 3px;
+    white-space: nowrap;
+}
+
+.users {
+    word-break: break-word;
+    justify-self: center;
+    font-size: 12px;
+    width: 80%;
+    align-self: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: $background;
+    height: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.users p {
+    animation: fadeInRight ease 1s;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.currentUser {
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: $green;
+    font-size: 9px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.currentUser p {
+    margin: 5px;
+    padding: 5px;
+}
+
+.logout {
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background: $green;
+    margin: 0;
+    padding: 5;
+    height: 25px;
+    width: 25px;
+}
+
+.logout:hover {
+    background: #24877c;
+}
+
+.logout:active {
+    transform: translateY(-4px);
+}
+
+.logout[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -100%;
+    left: 0;
+}
+
+.changeScreenOrientationPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.changeScreenOrientation {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1rem black;
+    margin: 1rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    .message .rightSide .messageText {
+        font-size: 7px;
+        padding: 0.5rem;
+    }
+
+    .myMessage .leftSide .messageText {
+        font-size: 7px;
+        padding: 0.5rem;
+    }
+
+    .timestamp {
+        font-size: 7px;
+    }
+
+    .username {
+        font-size: 7px;
+    }
+
+    .logout {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .usersHeader {
+        font-size: 10px;
+    }
+
+    .users {
+        font-size: 10px;
+    }
+
+    .currentUser {
+        font-size: 8px;
+    }
+
+    .currentUser p {
+        margin: 0;
+        padding: 5px;
+    }
+
+    .mainPage {
+        margin: 0
+    }
+    .messageInput {
+        font-size: 10px;
+    }
+
+    .chatPage {
+        padding-bottom: 25vh;
+    }
+}
+
+@media screen and (orientation:landscape) and (max-height: 550px) {
+    .message .rightSide .messageText {
+        font-size: 7px;
+        padding: 0.5rem;
+    }
+
+    .myMessage .leftSide .messageText {
+        font-size: 7px;
+        padding: 0.5rem;
+    }
+
+    .mainPage {
+        min-height: 200px;
+        height: 60vh;
+    }
+
+    .timestamp {
+        font-size: 7px;
+    }
+
+    .username {
+        font-size: 7px;
+    }
+
+    .users {
+        font-size: 10px;
+    }
+
+    .usersHeader {
+        font-size: 10px;
+    }
+    
+    .messageInput {
+        font-size: 10px;
+    }
+    .logout {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .currentUser {
+        font-size: 8px;
+    }
+
+    .currentUser p {
+        margin: 0;
+        padding: 5px;
+    }
+
+    .changeScreenOrientationPage {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .changeScreenOrientation {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 1rem;
+        border: 1rem black;
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .rotateSvg {
+        height: 5rem;
+        width: 5rem;
+        margin: 1rem 0.7rem 1rem 0.7rem;
+
+    }
+}

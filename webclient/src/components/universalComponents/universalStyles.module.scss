@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=azeret+mono&display=swap');
+$bordercolor: #6f07f2;
+$error: #e5145d;
+$succes: #14e56f;
+
+.sppeekLogo {
+  width: 10rem;
+  height: 10rem;
+}
+
+.logoDiv {
+  height: 20vh;
+  width: 100%;
+  min-height: 8rem;
+  margin-left: 15%;
+}
+
+.sppeekLogoChat {
+  height: 10rem;
+  width: 10rem;
+  position: fixed;
+  margin-left: 8rem;
+}
+
+.logoDivChat {
+  height: 20vh;
+  width: 100%;
+}
+
+.successAlert {
+  position: absolute;
+  font-size: 10px;
+  height: 4rem;
+  width: 18rem;
+  margin: 4rem 3rem;
+  font-family: 'Azeret Mono';
+  position: fixed;
+  background: #78C0A8;
+  display: flex;
+  z-index: 99 !important;
+
+  .successSvg {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 1rem 0.7rem 1rem 0.7rem;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    &,
+    h1 {
+      font-size: 0.8rem;
+      padding: 0;
+      color: white;
+    }
+
+    &,
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 0.6rem;
+      color: white;
+    }
+  }
+
+  .exitButton {
+    align-self: flex-start;
+    justify-self: center;
+    color: white;
+    border-radius: 10%;
+    border-color: transparent;
+    background-color: #78C0A8;
+
+    &:hover {
+      transition: background-color 0.5s ease-out;
+      background-color: #71ab98;
+    }
+  }
+
+}
+
+.errorAlert {
+  position: absolute;
+  font-size: 10px;
+  height: 4rem;
+  width: 18rem;
+  margin: 4rem 3rem;
+  font-family: 'Azeret Mono';
+  position: fixed;
+  background: #b41b58;
+  display: flex;
+  z-index: 99 !important;
+
+  .successSvg {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 1rem 0.7rem 1rem 0.7rem;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    &,
+    h1 {
+      font-size: 0.8rem;
+      padding: 0;
+      color: white;
+    }
+
+    &,
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 0.6rem;
+      color: white;
+    }
+  }
+
+  .exitButton {
+    align-self: flex-start;
+    justify-self: center;
+    color: white;
+    border-radius: 10%;
+    border-color: transparent;
+    background-color: #b41b58;
+
+    &:hover {
+      transition: background-color 0.5s ease-out;
+      background-color: #9c184d;
+    }
+  }
+}
+
+.createdUser {
+  display: flex;
+
+  .createdUser,
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.devider {
+  height: 15px;
+}
+
+.animatedBackground {
+  background-color: #e76f51;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+
+  .outTop {
+    animation: rotate 25s ease infinite;
+    transform-origin: 13px 25px;
+    animation-delay: 1s;
+  }
+
+  .inTop {
+    animation: rotate 15s ease infinite;
+    transform-origin: 13px 25px;
+    animation-delay: 1s;
+  }
+
+  .outBottom {
+    animation: rotate 30s ease infinite;
+    transform-origin: 84px 93px;
+    animation-delay: 1s;
+  }
+
+  .inBottom {
+    animation: rotate 20s ease infinite;
+    transform-origin: 84px 93px;
+    animation-delay: 1s;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .sppeekLogoChat {
+    width: 6rem;
+    height: 6rem;
+    margin-left: 4rem;
+  }
+
+  .logoDivChat {
+    height: 15vh;
+    height: 100px;
+  }
+
+}
+
+@media all and (max-width: 700px) {
+  .sppeekLogo {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .formDiv {
+    padding: 2rem 4rem 4rem;
+    border: 2px solid black;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 1rem;
+  }
+}
+
+@media all and (max-height: 700px) {
+  .sppeekLogo {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .formDiv {
+    padding: 2rem 3rem 3rem;
+    border: 2px solid black;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 1rem;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .logoDiv {
+    height: 10vh;
+    width: 100%;
+}
+  .formDiv {
+    padding: 2rem 3rem 3rem;
+    border: 2px solid black;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (orientation:landscape) and (max-height: 550px) {
+  .sppeekLogoChat {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .logoDivChat {
+    height: 20vh;
+    height: 75px;
+  }
+}

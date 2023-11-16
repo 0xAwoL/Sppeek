@@ -1,10 +1,11 @@
-<img src="https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/f5375e52-fff2-4fbd-824b-fdbdd68f2516" width="500" height="300" padding="0"/>
+<img src="https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/e42168b3-d495-4d12-b46d-ae249a3105e2" width="500" height="300" padding="0"/>
 
 **Welcome to my real-time web chat application. Offers a straightforward chat experience within a single room. User authentication is included for a secure and interactive chat environment and introduces essential features such as email verification and password management.**
 
 ### Live demo https://www.sppeek.online
 
-![test1](https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/e11f874c-73bc-4ed9-9092-406bb15d32a5)
+![test1](https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/c3608245-daed-45f2-a551-9df14a430f44)
+
 
 **This project is built using:**
 

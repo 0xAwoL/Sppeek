@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Folder paths
+# Folder names
 folders=("chat" "expressauth" "database" "webclient")
-# build dist folder in thses folders,  use correct npm run  
-# change urls and only make dev in public repo ?? 
 
 # Build Docker images in each folder
 for folder in ${folders[@]}; do

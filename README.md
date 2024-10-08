@@ -6,9 +6,9 @@
     </picture>
 </p>
 
-**Welcome to my real-time web chat application. Offers a straightforward chat experience within a single room. User authentication is included for a secure and interactive chat environment and introduces essential features such as email verification and password management.**
+**Welcome to my real-time chat application! Developed using Express.js, React.js, and PostgreSQL, this containerized solution delivers a smooth chat experience within a single shared room. With robust user authentication, your conversations are kept secure. Additionally, key features such as email verification and password management improve overall usability. Utilizing Socket.io for instant communication.**
 
-### Live demo https://www.sppeek.online
+### Live demo; domain expired :c
 
 
 ![test1](https://github.com/PrzemyslawKiryluk/Sppeek/assets/61840719/4475a6e7-206b-4bd5-8b54-1801e80ec4eb)
